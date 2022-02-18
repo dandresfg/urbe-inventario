@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/flex.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <main>
+        <section>
+            <header class="flex center">
+                <h1>Inventario</h1>
+            </header>
+        </section>
+        <section class="container">
+            <div class="flex wrap">
+                <div class="flex grow center">
+                    <form action="#" class="flex column start" id="form">
+                        <div class="input-form">
+                            <span>Codigo: </span>
+                            <input type="text" name="code" placeholder="Codigo" autocomplete="off" />
+                        </div>
+
+                        <div class="input-form">
+                            <span>Descripcion: </span>
+                            <input type="text" name="description" placeholder="Descripcion" autocomplete="off" />
+                        </div>
+
+                        <div class="input-form">
+                            <span>Cantidad: </span>
+                            <input type="number" name="amount" min="0" placeholder="Cantidad" autocomplete="off" />
+                        </div>
+                        
+                        <div class="input-form">
+                            <span>Precio: </span>
+                            <input type="number" name="price" min="0" placeholder="Precio ($)" autocomplete="off" />
+                        </div>
+
+                        <div class="flex grow center">
+                            <button class="bg-danger" id="cancel">Cancelar</button>
+                            <button>Agregar</button>
+                        </div>
+                        <hr/><br><br>
+                        <div class="flex column center">
+                            <div>
+                                Tota de producto: <strong><span id="totalPro">0</span></strong>
+                            </div>
+                            <br><br>
+                            <div>
+                                Valor de inventario: <strong><span id="valorInv">0</span></strong>
+                            </div>
+                            <br><br>
+                            <div>
+                                Cantidad de productos: <strong><span id="cantidadPro">0</span></strong>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="flex grow justify">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Descripcion</th>
+                                <th>Cantidad</th>
+                                <th>Precio($)</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
