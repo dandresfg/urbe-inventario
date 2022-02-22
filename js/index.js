@@ -71,7 +71,7 @@ function onUpdateProduct(code){
 // Draw
 function onUpdateTable(){
     editando = false;
-    const keys = Object.keys(productos);
+    const keys = Object.keys(productos).sort((a, b) => a - b);
 
     $('#cancel').style.display = "none"
     $('tbody').innerHTML = keys.map(code => {
